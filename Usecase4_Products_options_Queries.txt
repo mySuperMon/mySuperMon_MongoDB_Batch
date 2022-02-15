@@ -1,2 +1,9 @@
-use test;
-SELECT * FROM test.actor;
+use mongodbDemo
+db.getCollection('orders').find({})
+
+
+
+
+
+
+

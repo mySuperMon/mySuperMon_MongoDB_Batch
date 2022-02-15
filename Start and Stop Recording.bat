@@ -36,12 +36,12 @@ del -f accessToken.txt
 if %accessToken%==null (goto :showMessage)
 curl -v -H "Authorization: Bearer %accessToken%", -H "applicationIdentifier:%applicationIdentifier%" -X GET %serviceUrl%devaten/data/startRecording?usecaseIdentifier="customer" -i
 for /l %%x in (1, 1, 2) do (
-mongo -u user1 -p root localhost/mongodbDemo < customer.txt > out_customer_result.txt
+mongo -u user1 -p root localhost/Enter database name < customer.txt > out_customer_result.txt
 )
 curl -v -H "Authorization: Bearer %accessToken%", -H "applicationIdentifier:%applicationIdentifier%" -X GET %serviceUrl%devaten/data/stopRecording?usecaseIdentifier="customer&inputSource=batFile" -i
 
 curl -v -H "Authorization: Bearer %accessToken%", -H "applicationIdentifier:%applicationIdentifier%" -X GET %serviceUrl%devaten/data/startRecording?usecaseIdentifier="customer" -i
 for /l %%x in (1, 1, 2) do (
-mongo -u user1 -p root localhost/mongodbDemo < Usecase2_Tax_rates_Queries > Result_Usecase2.txt
+mongo -u user1 -p root localhost/Enter database name < Usecase2_Tax_rates_Queries > Result_Usecase2.txt
 )
 curl -v -H "Authorization: Bearer %accessToken%", -H "applicationIdentifier:%applicationIdentifier%" -X GET %serviceUrl%devaten/data/stopRecording?usecaseIdentifier="customer&inputSource=batFile" -i

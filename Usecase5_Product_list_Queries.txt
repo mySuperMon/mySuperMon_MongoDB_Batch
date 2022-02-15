@@ -1,2 +1,9 @@
-use test;
-SELECT * from test.language;
+use mongodbDemo
+db.getCollection('orders').find({})
+
+
+
+
+
+
+
