@@ -1,0 +1,8 @@
+use mongodbDemo
+db.getCollection('orders').find({})
+
+
+
+
+
+
